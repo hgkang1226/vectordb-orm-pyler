@@ -226,7 +226,7 @@ class PineconeBackend(BackendBase):
                     result=schema.from_dict(
                         {
                             **item["metadata"],
-                            primary_key: int(item["id"]),
+                            primary_key: item["id"],
                         }
                     ),
                     score=item["score"] if not missing_vector else None,
